@@ -1,0 +1,45 @@
+public class User {
+    private String username;
+    private String email;
+    private int age;
+    private boolean active;
+
+    public String getUsername() {return this.username;}
+    public String getEmail() {return this.email;}
+    public int getAge() {return this.age;}
+    public boolean isActive() {return this.active;}
+
+    public void setUsername(String username) {this.username = username;}
+    public void setEmail(String email) {this.email = email;}
+    public void setAge(int age) {this.age = age;}
+    public void setActive(boolean active) {this.active = active;}
+
+    private User(UserBuilder builder) {
+	this.username = builder.username;
+	this.email = builder.email;
+	this.age = builder.age;
+	this.active = builder.active;
+    }
+    public static class UserBuilder {
+
+	//required
+	private String username;
+	//optional
+	private String email;
+	private int age;
+	private boolean active;
+	
+	public UserBuilder(String username) {
+	    this.username = username;
+	}
+
+	public UserBuilder setAge(int age) {this.age = age; return this;}
+	public UserBuilder setEmail(String email) {this.email = email; return this;}
+	public UserBuilder setActive(boolean active) {this.active = active; return this;}
+
+	public User build() {
+	    return new User(this);
+	}
+
+    }
+}

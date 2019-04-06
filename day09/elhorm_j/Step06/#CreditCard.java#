@@ -1,0 +1,13 @@
+public class CreditCard {
+    private String pinCode;
+    private String accountId;
+
+    public CreditCard(String pin) {
+	this.pinCode = pin;
+    }
+    
+    public String getPinCode() {return this.pinCode;}
+    public void setPinCode(String pinCode) {this.pinCode = pinCode;}
+    public String getAccountId() {return this.accountId;}
+    public void setAccountId(String accountId) {this.accountId = accountId;}
+}

@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class Student extends Person {
+
+    private Book[] borrowedBooks;
+    private List<String> books;
+
+    public Student() {
+	this.books = new ArrayList<String>();
+	this.borrowedBooks = new Book[10000]; 
+    }
+
+    public void addBook(Book book) {
+	for (int i = 0; i <this.borrowedBooks.length; ++i)
+	    if (this.borrowedBooks[i] == null)
+		this.borrowedBooks[i] = book;
+    }
+
+    public boolean hasRead(String id) {
+	for (String b : this.books)
+	    if (b.equals(id))
+		return true;
+	return false;
+    }
+    
+    public void readBook(Book book) {
+	this.books.add(book.getId());
+    }
+
+    public void removeBook(String id) {
+	Book[] bo = new Book[10000];
+
+	for (int i = 0; i < this.borrowedBooks.length; ++i) {
+	    if (!(this.borrowedBooks[i].getId().equals(id))) {
+		bo[i] = this.borrowedBooks[i];
+	    }
+	}
+	this.borrowedBooks = bo;	
+    }
+
+    public Book returnBook(String id) {
+	for (int i = 0; i < this.borrowedBooks.length; ++i)
+	    if (this.borrowedBooks[i].getId().equals(id))
+		return this.borrowedBooks[i];
+	return null;
+    }
+    
+}

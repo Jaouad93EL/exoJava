@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class main {
+    public static void main(String[] args) {
+        LinkedListManager llm = new  LinkedListManager();
+	LinkedList<ArrayList<Integer>> ll = llm.splitArray(new Integer[] { 1, 2, 3, 4, 5 }, 3);
+	if (ll != null) {
+	    for (ArrayList<Integer> l : ll) {
+		System.out.println(l.toString());
+	    }
+	}
+    }
+}

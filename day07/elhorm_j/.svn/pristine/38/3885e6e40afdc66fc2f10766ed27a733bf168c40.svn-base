@@ -1,0 +1,11 @@
+public class ColoredCircle extends Circle implements Colorfull {
+    String color;
+    
+    @Override
+    public void draw() {
+	System.out.println("I'm a " + color + " rectangle!");
+    }
+    
+    public void setColor(String color) {this.color = color;}
+    public String getColor() {return this.color;}
+}

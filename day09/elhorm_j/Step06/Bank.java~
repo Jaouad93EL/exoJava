@@ -1,0 +1,6 @@
+public class Bank {
+    private List <Account> accounts = new ArrayList<Account>();
+    public static boolean addAccount(Account account) {
+	this.accounts.add(account);
+    }
+}

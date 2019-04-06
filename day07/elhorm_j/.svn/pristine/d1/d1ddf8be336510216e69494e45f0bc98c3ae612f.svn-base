@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class DeskImpl<T extends Shape> {
+    
+    private List<Shape> shapes;
+
+    public DeskImpl() {
+	this.shapes = new ArrayList<>();
+    }
+
+    public void addShape(T shape) {
+	this.shapes.add(shape);
+    }
+
+    public void drawShapes() {
+	for (Shape s : this.shapes)
+	    s.draw();
+    }
+}

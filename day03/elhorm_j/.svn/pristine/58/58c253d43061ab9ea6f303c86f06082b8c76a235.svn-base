@@ -1,0 +1,13 @@
+public class Elephant extends Mammal {
+
+    public Elephant(String name, float weight) {
+	super(name, weight);
+    }
+
+    @Override
+    public void say() {
+	java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+      	System.out.println(df.format(this.weight));
+        System.out.println(this.name + " say : I'm BIG and HEAVY! (weight : " + this.weight + ")");
+    }
+}

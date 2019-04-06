@@ -1,0 +1,4 @@
+public interface Desk <T>{
+    public void addShape(T shape);
+    public void drawShapes();
+}

@@ -1,0 +1,37 @@
+public class Juice {
+
+    private Fruit fruit;
+    private Sugar sugar;
+    private Juice juice;
+    private String type;
+    private int calories;
+    private String name;
+
+    public Juice(Fruit fruit, Sugar sugar, int calories, String type, String name) {
+	this.fruit = fruit;
+	this.sugar = sugar;
+	this.calories = calories;
+	this.type = type;
+	this.name = name;
+    }
+    
+    public Fruit getFruit() {return this.fruit;}
+    public Sugar getSugar() {return this.sugar;}
+    public Juice getJuice() {return this.juice;}
+    public String getType() {return this.type;}
+    public int getCalories() {return this.calories;}
+    public String getName() {return this.name;}
+
+    public void setFruit(Fruit fruit) {this.fruit = fruit;}
+    public void setSugar(Sugar sugar) {this.sugar = sugar;}
+    public void setJuice(Juice juice) {this.juice = juice;}
+    public void setType(String type) {this.type = type;}
+    public void setCalories(int calories) {this.calories = calories;}
+    public void setName(String name) {this.name = name;}
+
+    @Override
+    public String toString() {
+	String stock = "Juice [fruit=" + fruit + ", sugar=" + sugar + ", calories=" + this.calories + ", type=" + this.type + ", name=" +this.name + "]";
+	return stock;
+    }
+}

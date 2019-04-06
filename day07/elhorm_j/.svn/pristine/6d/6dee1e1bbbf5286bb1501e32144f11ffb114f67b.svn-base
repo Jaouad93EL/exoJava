@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class DeskImpl<T extends Shape,  U extends ColoredCircle> {
+    
+    private List<Shape> shapes;
+
+    public DeskImpl() {
+	this.shapes = new ArrayList<>();
+    }
+
+    public void addShape(T shape) {
+	this.shapes.add(shape);
+    }
+
+    public void drawShapes() {
+	for (Shape s : this.shapes)
+	    s.draw();
+    }
+
+    public void addColoredShape(U shape) {
+	if (shape instanceof Shape)
+	    this.shapes.add(shape);
+    }
+
+    void drawColoredShapes() {
+	for (Shape s : this.shapes)
+	    s.draw();
+    }
+}
